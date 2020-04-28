@@ -4,40 +4,67 @@ import matter from 'gray-matter';
 import remark from 'remark';
 import html from 'remark-html';
 
-const postsDirectory = path.join(process.cwd(), 'posts');
-
-export function getSortedPostsData() {
-  // Get file names under /posts
-  const fileNames = fs.readdirSync(postsDirectory);
-  const allPostsData = fileNames.map((fileName) => {
-    // Remove ".md" from file name to get id
-    const id = fileName.replace(/\.md$/, '');
-
-    // Read markdown file as string
-    const fullPath = path.join(postsDirectory, fileName);
-    const fileContents = fs.readFileSync(fullPath, 'utf8');
-
-    // Use gray-matter to parse the post metadata section
-    const matterResult = matter(fileContents);
-
-    // Combine the data with the id
-    return {
-      id,
-      ...(matterResult.data as { date: string; title: string }),
-    };
-  });
-  // Sort posts by date
-  return allPostsData.sort((a, b) => {
-    if (a.date < b.date) {
-      return 1;
-    } else {
-      return -1;
-    }
-  });
+export interface post {
+  id: string;
+  date: string;
+  title: string;
+  categories: string[];
+  tags: string[];
+  excerpt: string;
+  content: string;
 }
 
-export function getAllPostIds() {
-  const fileNames = fs.readdirSync(postsDirectory);
+const postsDirectory = path.join(process.cwd(), 'posts');
+
+const readPostData = async (
+  fileName: string,
+  getContent: boolean
+): Promise<post> => {
+  const id = fileName.replace(/\.md$/, '');
+  const fullPath = path.join(postsDirectory, fileName);
+  const fileContents = await fs.promises.readFile(fullPath, 'utf8');
+  const matterResult = matter(fileContents, { excerpt: true });
+  const rawData = {
+    id,
+    ...(matterResult.data as {
+      date: string;
+      title: string;
+      categories: string;
+      tags: string;
+    }),
+  };
+  const processedExcerpt = await remark()
+    .use(html)
+    .process(matterResult.excerpt);
+  const excerptHtml = processedExcerpt.toString();
+  let contentHtml = '';
+  if (getContent) {
+    const processedContent = await remark()
+      .use(html)
+      .process(matterResult.content);
+    contentHtml = processedContent.toString().replace('<hr>', '');
+  }
+  return {
+    ...rawData,
+    categories: rawData.categories?.trim().split(',') ?? [],
+    tags: rawData.tags?.trim().split(',') ?? [],
+    excerpt: excerptHtml,
+    content: contentHtml,
+  };
+};
+
+export async function getSortedPosts() {
+  const fileNames = await fs.promises.readdir(postsDirectory);
+  const postsPromise = [];
+  fileNames.map((fileName) => postsPromise.push(readPostData(fileName, false)));
+  const allPosts = await Promise.all(postsPromise);
+  return allPosts.sort((x, y) =>
+    x.date > y.date ? -1 : x.date < y.date ? 1 : 0
+  );
+}
+
+export async function getAllPostIds() {
+  const fileNames = await fs.promises.readdir(postsDirectory);
   return fileNames.map((fileName) => {
     return {
       params: {
@@ -47,23 +74,6 @@ export function getAllPostIds() {
   });
 }
 
-export async function getPostData(id: string) {
-  const fullPath = path.join(postsDirectory, `${id}.md`);
-  const fileContents = fs.readFileSync(fullPath, 'utf8');
-
-  // Use gray-matter to parse the post metadata section
-  const matterResult = matter(fileContents);
-
-  // Use remark to convert markdown into HTML string
-  const processedContent = await remark()
-    .use(html)
-    .process(matterResult.content);
-  const contentHtml = processedContent.toString();
-
-  // Combine the data with the id and contentHtml
-  return {
-    id,
-    contentHtml,
-    ...(matterResult.data as { date: string; title: string }),
-  };
+export async function getPost(id: string) {
+  return await readPostData(`${id}.md`, true);
 }

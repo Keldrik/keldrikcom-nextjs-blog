@@ -1,16 +1,11 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import Siteheader from './siteheader';
+import Sitefooter from './sitefooter';
 
-const name = '[Your Name]';
 export const siteTitle = 'Next.js Sample Website';
 
-export default function Layout({
-  children,
-  home,
-}: {
-  children: React.ReactNode;
-  home?: boolean;
-}) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div>
       <Head>
@@ -28,35 +23,9 @@ export default function Layout({
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header>
-        {home ? (
-          <>
-            <img src="/images/profile.jpg" alt={name} />
-            <h1>{name}</h1>
-          </>
-        ) : (
-          <>
-            <Link href="/">
-              <a>
-                <img src="/images/profile.jpg" alt={name} />
-              </a>
-            </Link>
-            <h2>
-              <Link href="/">
-                <a>{name}</a>
-              </Link>
-            </h2>
-          </>
-        )}
-      </header>
+      <Siteheader />
       <main>{children}</main>
-      {!home && (
-        <div>
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
-        </div>
-      )}
+      <Sitefooter />
     </div>
   );
 }
