@@ -5,9 +5,9 @@ tags: "c#, transform"
 categories: "unity"
 ---
 
-### Einleitung
-
 Dies ist mein erster Artikel zum Thema Scripting in Unity. Ich habe hier in meinem Blog bis zuletzt nur über Spiele berichtet, aber nie über Programmierung und / oder die Entwicklung von Spielen. Das möchte ich zukünftig ändern und starte deshalb heute mit meinem ersten Beitrag über die Transform Komponente und das Verändern der Postition von GameObjects.
+
+---
 
 Die Script-Sprache meiner Wahl ist C#, aber ich denke, das Meiste lässt sich leicht nach JavaScript übertragen. Ich kann hier keinen Einführungskurs für die Programmiersprache C# schreiben, dafür fehlt mir leider die Zeit. Deshalb setze für das Verständnis Grundkenntnisse voraus. Für alle die schon etwas Erfahrung mit Unity haben, wird der nachfolgende Text wahrscheinlich nicht viel neue Erkenntnisse enthalten, aber man muss ja mal irgendwo anfangen.
 
@@ -27,22 +27,17 @@ Die position Property der Transform Komponente ist ein Vector3. Ein Vector3 hat,
 
 Wir können die Member für die Koordinaten x, y und z nicht direkt verändern und müssen deshalb die Set Methode verwenden oder der position Property einen neuen Vector3 zuweisen. Damit können wir ein Objekt an eine beliebige Position setzen.
 
-```javascript
+```clike
 // Setzt die Position des script ausführenden GameObjects
 // auf x:1, y:0, z:5
-
 this.transform.position.Set(1f, 0f, 5f);
-
 
 // Hat den selben Effekt, nur weisen wir hier einen
 // neuen Vector3 zu
-
 this.transform.position = new Vector3(1f, 0f, 5f);
-
 
 // Setzt das script ausführende GameObject auf die
 // selbe Position wie anderesGameObject
-
 this.transform.position = anderesGameObject.transform.position;
 ```
 
@@ -52,25 +47,17 @@ Für eine Bewegung nutzen wir die Update Methode als Ausgangspunkt, die genauso 
 
 Neben der Zeit als Multiplikator brauchen wir natürlich auch noch die Richtung und Geschwindigkeit der Bewegung. Die gewünschte Richtung drücken wir mit einem Vector3 aus, dessen Werte für die Achsen x, y und z normalerweise zwischen 0 und 1 liegen. Die Geschwindigkeit ist einfach ein float, der als Multiplikator zusammen mit der Zeit vorgibt, wie schnell sich ein Objekt bewegen soll.
 
-```javascript
-// Objekt bewegt sich mit einer Geschwindigkeit von 10
-// nach rechts
-
+```clike
+// Objekt bewegt sich mit einer Geschwindigkeit von 10 nach rechts
 var Geschwindigkeit = 10f;
 var Richtung = new Vector3(1f, 0f, 0f);
+this.transform.position += Richtung * Geschwindigkeit * Time.deltaTime;
 
-this.transform.position += Richtung * Geschwindigkeit
-  							* Time.deltaTime;
-
-
-// Objekt bewegt sich mit einer Geschwindigkeit von 5
-// nach oben und mit 10 nach hinten
-
+// Objekt bewegt sich mit einer Geschwindigkeit von 5 nach oben
+// und mit 10 nach hinten
 var Geschwindigkeit = 10f;
 var Richtung = new Vector3(0f, 0.5f, -1f);
-
-this.transform.position += Richtung * Geschwindigkeit
-  							* Time.deltaTime;
+this.transform.position += Richtung * Geschwindigkeit * Time.deltaTime;
 ```
 
 ### Beschleunigung
@@ -81,20 +68,16 @@ Das ganze ist relativ leicht umzusetzen. Man braucht einen Wert für die maximal
 
 ### Beispiel: Script - Objekt mit Pfeiltasten bewegen
 
-```javascript
+```clike
 using UnityEngine;
 using System.Collections;
 
 public class Bewegen : MonoBehaviour
 {
-
-    // public member eines Scripts können bequem
-    // im Unity Editor gesetzt und auch während
-    // das Spiel getestet wird verändert werden.
-
+    // public member eines Scripts können bequem im Unity Editor gesetzt
+    // und auch während das Spiel getestet wird verändert werden.
     public float Geschwindigkeit;
     public float Beschleunigung;
-
 
     float aktuelleGeschwindigkeit = 0;
     Vector3 richtung = Vector3.zero;
@@ -125,10 +108,7 @@ public class Bewegen : MonoBehaviour
         float x = 0f;
         float z = 0f;
 
-
-        // Input.GetKey gibt true zurück wenn
-        // die gefragte Taste gedrückt ist
-
+        // Input.GetKey gibt true zurück wenn die gefragte Taste gedrückt ist
         if (Input.GetKey(KeyCode.RightArrow))
         {
             x++;

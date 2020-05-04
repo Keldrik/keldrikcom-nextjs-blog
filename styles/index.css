@@ -4,6 +4,42 @@
 @tailwind components;
 /* purgecss end ignore */
 
+body {
+    @apply text-gray-900
+}
 
+a {
+    @apply font-bold
+}
+
+a:hover {
+    @apply text-gray-500
+}
+
+p {
+    @apply text-justify pb-2
+}
+
+h1 {
+    @apply text-2xl font-semibold
+}
+
+h2 {
+    @apply text-xl font-semibold
+}
+
+h3 {
+    @apply text-lg pb-1 font-semibold
+}
 
 @tailwind utilities;
+
+/*.postcontent img {*/
+/*    @apply w-full h-auto p-2*/
+/*}*/
+
+/*@screen md {*/
+/*    .postcontent img {*/
+/*        @apply w-2/3 h-auto p-4 mx-auto*/
+/*    }*/
+/*}*/

@@ -1,26 +1,30 @@
+import React from 'react';
 import Head from 'next/head';
-import Layout, { siteTitle } from '../components/layout';
+import Layout from '../components/layout';
 import { getSortedPosts, post } from '../lib/posts';
-import Link from 'next/link';
-import Date from '../components/date';
-import { GetStaticProps } from 'next';
+import { GetStaticProps, NextPage } from 'next';
 import Postlist from '../components/postlist';
 
-export default function Home({ allPosts }: { allPosts: post[] }) {
+export interface IndexProps {
+  allPosts: post[];
+}
+
+const Index: NextPage<IndexProps> = ({ allPosts }) => {
   return (
     <Layout>
       <Head>
-        <title>{siteTitle}</title>
+        <title>
+          Keldriks Blog - Programmieren mit Javascript, Node.js, React usw...
+        </title>
       </Head>
       <section>
-        <h2>Blog</h2>
         <Postlist postList={allPosts} />
       </section>
     </Layout>
   );
-}
+};
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps = async () => {
   const allPosts = await getSortedPosts();
   return {
     props: {
@@ -28,3 +32,5 @@ export const getStaticProps: GetStaticProps = async (context) => {
     },
   };
 };
+
+export default Index;

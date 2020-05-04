@@ -1,3 +1,4 @@
+import React from 'react';
 import Link from 'next/link';
 import Date from './date';
 import { post } from '../lib/posts';
@@ -7,19 +8,20 @@ export interface PostlistitemProps {
 }
 
 const Postlistitem: React.FunctionComponent<PostlistitemProps> = ({ p }) => {
+  const content = <div dangerouslySetInnerHTML={{ __html: p.excerpt }}></div>;
   return (
-    <div>
-      <Link href="/posts/[id]" as={`/posts/${p.id}`}>
+    <div className="pb-8">
+      <div className="text-gray-600">
+        <Date dateString={p.date} />
+      </div>
+      <Link href="/code/[id]" as={`/code/${p.id}`}>
         <a>
-          <h2>{p.title}</h2>
+          <h2 className="text-xl pt-1 pb-2">{p.title}</h2>
         </a>
       </Link>
-      <small>
-        <Date dateString={p.date} />
-      </small>
-      <p dangerouslySetInnerHTML={{ __html: p.excerpt }}></p>
-      <Link href="/posts/[id]" as={`/posts/${p.id}`}>
-        <a>Weiterlesen...</a>
+      {content}
+      <Link href="/code/[id]" as={`/code/${p.id}`}>
+        <a className="text-gray-600 font-medium">weiterlesen ...</a>
       </Link>
     </div>
   );

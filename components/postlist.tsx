@@ -1,3 +1,4 @@
+import React from 'react';
 import Link from 'next/link';
 import Date from './date';
 import { post } from '../lib/posts';
