@@ -6,7 +6,7 @@ import Sitefooter from './sitefooter';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="container md:w-4/5 lg:w-8/12 xl:w-7/12 m-auto px-6 py-2">
+    <div className="container md:w-4/5 lg:w-8/12 xl:w-7/12 m-auto pt-6 px-6 pb-4">
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
