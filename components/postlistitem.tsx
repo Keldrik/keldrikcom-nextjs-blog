@@ -11,7 +11,7 @@ const Postlistitem: React.FunctionComponent<PostlistitemProps> = ({ p }) => {
   const content = <div dangerouslySetInnerHTML={{ __html: p.excerpt }}></div>;
   return (
     <div className="pb-8">
-      <div className="text-gray-600">
+      <div className="text-gray-700">
         <Date dateString={p.date} />
       </div>
       <Link href="/code/[id]" as={`/code/${p.id}`}>
@@ -21,7 +21,7 @@ const Postlistitem: React.FunctionComponent<PostlistitemProps> = ({ p }) => {
       </Link>
       {content}
       <Link href="/code/[id]" as={`/code/${p.id}`}>
-        <a className="text-gray-600 font-medium">weiterlesen ...</a>
+        <a className="text-gray-700 font-medium">weiterlesen ...</a>
       </Link>
     </div>
   );

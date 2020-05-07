@@ -2,10 +2,17 @@ import React from 'react';
 import { NextPage } from 'next';
 import Layout from '../components/layout';
 import Link from 'next/link';
+import Head from 'next/head';
 
 const About: NextPage = () => {
   return (
     <Layout>
+      <Head>
+        <title>
+          Thomas Wiegold - Selbständiger Programmierer aus Münster - Keldrik.com
+          - Javascript, Node.js, React usw...
+        </title>
+      </Head>
       <div className="pt-6 pb-16">
         <h1 className="text-3xl uppercase">Thomas Wiegold</h1>
         <p className="pt-4 text-left">

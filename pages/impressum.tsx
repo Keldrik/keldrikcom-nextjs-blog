@@ -1,10 +1,17 @@
 import React from 'react';
 import { NextPage } from 'next';
 import Layout from '../components/layout';
+import Head from 'next/head';
 
 const Impressum: NextPage = () => {
   return (
     <Layout>
+      <Head>
+        <title>
+          Impressum - Keldrik.com - Programmieren mit Javascript, Node.js, React
+          usw...
+        </title>
+      </Head>
       <div className="pt-6 pb-16">
         <h1 className="text-3xl uppercase">Impressum</h1>
         <p className="text-lg pt-4">

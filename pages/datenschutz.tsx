@@ -1,10 +1,17 @@
 import React from 'react';
 import { NextPage } from 'next';
 import Layout from '../components/layout';
+import Head from 'next/head';
 
 const Datenschutz: NextPage = () => {
   return (
     <Layout>
+      <Head>
+        <title>
+          Datenschutz - Keldrik.com - Programmieren mit Javascript, Node.js,
+          React usw...
+        </title>
+      </Head>
       <div className="pt-6 pb-6">
         <h1 className="text-3xl uppercase">Datenschutz</h1>
         <p className="pt-4">

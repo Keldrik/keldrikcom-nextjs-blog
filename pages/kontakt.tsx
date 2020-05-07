@@ -1,10 +1,17 @@
 import React from 'react';
 import { GetServerSideProps, NextPage } from 'next';
 import Layout from '../components/layout';
+import Head from 'next/head';
 
 const Kontakt: NextPage<{ success?: boolean }> = ({ success }) => {
   return (
     <Layout>
+      <Head>
+        <title>
+          Kontakt - Keldrik.com - Programmieren mit Javascript, Node.js, React
+          usw...
+        </title>
+      </Head>
       <div className="w-full max-w-lg mx-auto">
         <h1 className="text-2xl uppercase">Kontakt</h1>
         {success ? (
