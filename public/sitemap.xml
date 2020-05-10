@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+    <loc>https://keldrikcom.now.sh/</loc>
+    <priority>1.0</priority>
+</url>
+<url>
+    <loc>https://keldrikcom.now.sh/thomas-wiegold</loc>
+    <priority>0.8</priority>
+</url>
+<url>
+    <loc>https://keldrikcom.now.sh/code/fetch-mit-react-hooks</loc>
+    <priority>0.8</priority>
+</url>
+<url>
+    <loc>https://keldrikcom.now.sh/code/nextjs-9-api-backend</loc>
+    <priority>0.8</priority>
+</url>
+<url>
+    <loc>https://keldrikcom.now.sh/code/nextjs-9-dynamic-routing</loc>
+    <priority>0.8</priority>
+</url>
+<url>
+    <loc>https://keldrikcom.now.sh/code/unity-collision-detection</loc>
+    <priority>0.8</priority>
+</url>
+<url>
+    <loc>https://keldrikcom.now.sh/code/xamarin-forms-mobile-entwicklung</loc>
+    <priority>0.8</priority>
+</url>
+<url>
+    <loc>https://keldrikcom.now.sh/code/unity-position-und-bewegung-teil-2</loc>
+    <priority>0.8</priority>
+</url>
+<url>
+    <loc>https://keldrikcom.now.sh/code/unity-position-und-bewegung-teil-1</loc>
+    <priority>0.8</priority>
+</url>
+<url>
+    <loc>https://keldrikcom.now.sh/kontakt</loc>
+    <priority>0.2</priority>
+</url>
+<url>
+    <loc>https://keldrikcom.now.sh/impressum</loc>
+    <priority>0.2</priority>
+</url>
+<url>
+    <loc>https://keldrikcom.now.sh/datenschutz</loc>
+    <priority>0.2</priority>
+</url>
+</urlset>

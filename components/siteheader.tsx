@@ -12,7 +12,7 @@ const Siteheader: React.FunctionComponent = () => {
     <header className="pb-2">
       <div className="flex justify-between">
         <SiteLogo />
-        <div className="">
+        <nav className="">
           <ul className="hidden md:flex justify-between h-full pb-2 text-xl">
             <li className="inline-block self-end transition duration-300">
               <Link href="/">
@@ -37,9 +37,9 @@ const Siteheader: React.FunctionComponent = () => {
               <path d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
             </svg>
           </button>
-        </div>
+        </nav>
       </div>
-      <div className={menushow ? 'border-gray-600 p-4 md:hidden' : 'hidden'}>
+      <nav className={menushow ? 'border-gray-600 p-4 md:hidden' : 'hidden'}>
         <ul className="text-xl">
           <li className="border-t border-gray-700 py-2">
             <Link href="/">
@@ -56,7 +56,7 @@ const Siteheader: React.FunctionComponent = () => {
             </Link>
           </li>
         </ul>
-      </div>
+      </nav>
     </header>
   );
 };

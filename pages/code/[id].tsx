@@ -23,12 +23,17 @@ const Post: NextPage<PostProps> = ({ post }) => {
           React usw...
         </title>
       </Head>
-      <article>
-        <h1 className="text-center text-2xl md:text-3xl">{post.title}</h1>
-        <div className="text-center text-lg pb-4">
-          <Date dateString={post.date} />
-        </div>
+      <article itemScope itemType="http://schema.org/Article">
+        <header>
+          <h1 itemProp="name" className="text-center text-2xl md:text-3xl">
+            {post.title}
+          </h1>
+          <div className="text-center text-lg pb-4">
+            <Date dateString={post.date} />
+          </div>
+        </header>
         <div
+          itemProp="articleBody"
           className="postcontent"
           dangerouslySetInnerHTML={{ __html: post.content }}
         />

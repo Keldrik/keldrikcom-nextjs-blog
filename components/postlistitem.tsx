@@ -8,22 +8,31 @@ export interface PostlistitemProps {
 }
 
 const Postlistitem: React.FunctionComponent<PostlistitemProps> = ({ p }) => {
-  const content = <div dangerouslySetInnerHTML={{ __html: p.excerpt }}></div>;
+  const content = (
+    <div
+      itemProp="articleBody"
+      dangerouslySetInnerHTML={{ __html: p.excerpt }}
+    ></div>
+  );
   return (
-    <div className="pb-8">
-      <div className="text-gray-700">
-        <Date dateString={p.date} />
-      </div>
-      <Link href="/code/[id]" as={`/code/${p.id}`}>
-        <a>
-          <h2 className="text-xl pt-1 pb-2">{p.title}</h2>
-        </a>
-      </Link>
+    <article itemScope itemType="http://schema.org/Article" className="pb-8">
+      <header>
+        <div className="text-gray-700">
+          <Date dateString={p.date} />
+        </div>
+        <Link href="/code/[id]" as={`/code/${p.id}`}>
+          <a>
+            <h2 itemProp="name" className="text-xl pt-1 pb-2">
+              {p.title}
+            </h2>
+          </a>
+        </Link>
+      </header>
       {content}
       <Link href="/code/[id]" as={`/code/${p.id}`}>
         <a className="text-gray-700 font-medium">weiterlesen ...</a>
       </Link>
-    </div>
+    </article>
   );
 };
 
