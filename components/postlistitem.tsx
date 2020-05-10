@@ -16,13 +16,14 @@ const Postlistitem: React.FunctionComponent<PostlistitemProps> = ({ p }) => {
   );
   return (
     <article itemScope itemType="http://schema.org/Article" className="pb-8">
+      <meta itemProp="author publisher" content="Thomas Wiegold" />
       <header>
         <div className="text-gray-700">
           <Date dateString={p.date} />
         </div>
         <Link href="/code/[id]" as={`/code/${p.id}`}>
           <a>
-            <h2 itemProp="name" className="text-xl pt-1 pb-2">
+            <h2 itemProp="name headline" className="text-xl pt-1 pb-2">
               {p.title}
             </h2>
           </a>
