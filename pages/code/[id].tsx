@@ -24,7 +24,7 @@ const Post: NextPage<PostProps> = ({ post }) => {
         </title>
       </Head>
       <article itemScope itemType="http://schema.org/Article">
-        <meta itemProp="author publisher" content="Thomas Wiegold" />
+        <meta itemProp="author" content="Thomas Wiegold" />
         <header>
           <h1
             itemProp="name headline"

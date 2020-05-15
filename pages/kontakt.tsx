@@ -35,7 +35,7 @@ const Kontakt: NextPage<{ success?: boolean }> = ({ success }) => {
             <input
               type="hidden"
               name="redirectTo"
-              value="http://localhost:3000/kontakt?success=true"
+              value="https://www.keldrik.com/kontakt?success=true"
             />
             <div className="flex flex-wrap -mx-3 mb-2">
               <div className="w-full px-3 mb-2 md:mb-0">

@@ -6,7 +6,7 @@ const Sitefooter: React.FunctionComponent = () => {
   return (
     <footer className="pt-4 pb-5">
       <div className="flex justify-around pb-2 text-sm">
-        <div className="uppercase">
+        <nav className="uppercase">
           <span className="px-2">
             <Link href="/kontakt">
               <a className="font-medium">Kontakt</a>
@@ -24,7 +24,7 @@ const Sitefooter: React.FunctionComponent = () => {
               <a className="font-medium">Datenschutz</a>
             </Link>
           </span>
-        </div>
+        </nav>
       </div>
       <SocialIcons />
     </footer>

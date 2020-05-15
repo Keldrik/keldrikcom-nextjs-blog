@@ -12,7 +12,7 @@ const Comments: React.FunctionComponent<CommentsProps> = ({ id, title }) => {
       <DiscussionEmbed
         shortname="keldrik"
         config={{
-          url: `https://www.keldrik.com/posts/${id}`,
+          url: `https://www.keldrik.com/code/${id}`,
           identifier: id,
           title: title,
         }}

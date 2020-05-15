@@ -9,10 +9,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <div className="container md:w-4/5 lg:w-8/12 xl:w-7/12 m-auto pt-6 px-6 pb-4">
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="description"
-          content="Learn how to build a personal website using Next.js"
-        />
       </Head>
       <Siteheader />
       <main className="py-4">{children}</main>
