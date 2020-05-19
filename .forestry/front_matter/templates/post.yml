@@ -22,3 +22,5 @@ fields:
 - type: text
   name: categories
   label: Categories
+pages:
+- posts/test-blog-post.md
