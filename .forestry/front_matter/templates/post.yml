@@ -4,13 +4,21 @@ hide_body: false
 fields:
 - type: text
   name: title
-  label: title
+  label: Title
+  config:
+    required: true
+    min: 4
 - type: datetime
   name: date
-  label: date
+  label: Date
+  config:
+    date_format: YYYY-MM-DD
+    export_format: YYYY-MM-DD
+    required: true
+  default: now
 - type: text
   name: tags
-  label: tags
+  label: Tags
 - type: text
   name: categories
-  label: categories
+  label: Categories
