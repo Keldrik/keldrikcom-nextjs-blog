@@ -9,7 +9,7 @@ sections:
   label: Blog Posts
   create: documents
   match: "**/*.md"
-upload_dir: public/blog
+upload_dir: public/media
 public_path: public
 front_matter_path: ''
 use_front_matter_path: false
