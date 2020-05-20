@@ -15,6 +15,8 @@ const Impressum: NextPage = () => {
           name="description"
           content="Wer bin ich, wo bin ich, und wie kannst du mich kontaktieren?"
         />
+        <meta name="robots" content="noindex" />
+        <link href="https://www.keldrik.com/impressum" rel="canonical" />
       </Head>
       <div className="pt-6 pb-16">
         <h1 className="text-3xl uppercase">Impressum</h1>

@@ -23,6 +23,10 @@ const Post: NextPage<PostProps> = ({ post }) => {
           React usw...
         </title>
         <meta name="description" content={post.description} />
+        <link
+          href={`https://www.keldrik.com/code/${post.id}`}
+          rel="canonical"
+        />
       </Head>
       <article itemScope itemType="http://schema.org/Article">
         <meta itemProp="author" content="Thomas Wiegold" />

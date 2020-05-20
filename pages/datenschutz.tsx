@@ -15,6 +15,8 @@ const Datenschutz: NextPage = () => {
           name="description"
           content="Informationen über den Datenschutz. Bla, bla, bla... Nicht wirklich interessant..."
         />
+        <meta name="robots" content="noindex" />
+        <link href="https://www.keldrik.com/datenschutz" rel="canonical" />
       </Head>
       <div className="pt-6 pb-6">
         <h1 className="text-3xl uppercase">Datenschutz</h1>

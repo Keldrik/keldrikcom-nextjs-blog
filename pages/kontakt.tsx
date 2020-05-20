@@ -15,6 +15,8 @@ const Kontakt: NextPage<{ success?: boolean }> = ({ success }) => {
           name="description"
           content="Mit dem Kontaktformular kannst du mir eine Nachricht schicken."
         />
+        <meta name="robots" content="noindex" />
+        <link href="https://www.keldrik.com/kontakt" rel="canonical" />
       </Head>
       <div className="w-full max-w-lg mx-auto">
         <h1 className="text-2xl uppercase">Kontakt</h1>

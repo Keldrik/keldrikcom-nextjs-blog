@@ -9,6 +9,7 @@ const SiteLogo: React.FunctionComponent = () => {
           <img
             src="/img/logo.png"
             className="w-48 h-auto hover:opacity-50 transform hover:scale-95 transition duration-500"
+            alt="Keldrik Website Logo"
           />
         </a>
       </Link>

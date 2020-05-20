@@ -48,17 +48,17 @@
 
     <url>
         <loc>https://www.keldrik.com/kontakt</loc>
-        <priority>0.2</priority>
+        <priority>0.1</priority>
     </url>
 
     <url>
         <loc>https://www.keldrik.com/impressum</loc>
-        <priority>0.2</priority>
+        <priority>0.1</priority>
     </url>
 
     <url>
         <loc>https://www.keldrik.com/datenschutz</loc>
-        <priority>0.2</priority>
+        <priority>0.1</priority>
     </url>
 
 </urlset>

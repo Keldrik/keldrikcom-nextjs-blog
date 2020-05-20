@@ -9,8 +9,15 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang="de">
-        <Head />
+      <Html lang="de-DE">
+        <Head>
+          <script
+            async
+            defer
+            data-domain="keldrik.com"
+            src="/js/plausible.js"
+          ></script>
+        </Head>
         <body>
           <Main />
           <NextScript />

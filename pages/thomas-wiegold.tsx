@@ -16,6 +16,7 @@ const About: NextPage = () => {
           name="description"
           content="Eine kurze Beschreibung meiner Arbeit als selbstständiger Programmierer. Was interessiert mich und was habe ich gemacht."
         />
+        <link href="https://www.keldrik.com/thomas-wiegold" rel="canonical" />
       </Head>
       <div className="pt-6 pb-16">
         <h1 className="text-3xl uppercase">Thomas Wiegold</h1>
