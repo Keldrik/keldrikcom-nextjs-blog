@@ -3,6 +3,7 @@ title: "Unity - Position und Bewegung Teil 1"
 date: "2014-07-01"
 tags: "c#, transform"
 categories: "unity"
+description: "In den meisten Spielen gibt es Objekte, die bewegt werden müssen. Wer anfängt sich mit Unity auseinanderzusetzen, muss sich deshalb auch meistens gleich zu Beginn die Frage stellen, wie man die Position eines GameObject finden und modifizieren kann."
 ---
 
 Dies ist mein erster Artikel zum Thema Scripting in Unity. Ich habe hier in meinem Blog bis zuletzt nur über Spiele berichtet, aber nie über Programmierung und / oder die Entwicklung von Spielen. Das möchte ich zukünftig ändern und starte deshalb heute mit meinem ersten Beitrag über die Transform Komponente und das Verändern der Postition von GameObjects.

@@ -3,6 +3,7 @@ title: "Next.js 9 - API Backend"
 date: "2019-07-26"
 tags: "api, nextjs"
 categories: "react"
+description: "Next.js Version 9 ist vollgepackt mit neuen tollen Features. Mit diesem Post möchte ich euch das neue API Feature näher bringen."
 ---
 
 Vor kurzem haben die fleißigen Entwickler von Next.js Version 9 veröffentlicht und diese ist vollgepackt mit neuen tollen Features und Verbesserungen. Ich habe in diesem Blog bereits über dynamisches Routing geschrieben. Heute möchte ich euch das neue API Feature näher bringen.

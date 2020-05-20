@@ -3,6 +3,7 @@ title: "Next.js 9 - Dynamic Routing"
 date: "2019-07-25"
 tags: "nextjs"
 categories: "react"
+description: "Was mir besonders gut an Version 9 gefällt ist, wie einfach man zukünftig dynamisches Routing mit einer Next.js Webseite umsetzen kann."
 ---
 
 Anfang des Monats wurde Version 9 des SSR React Frameworks Next.js veröffentlicht. Die Entwickler waren sehr fleißig. Mit dem Release wurden einige tolle neue Features hinzugefügt und vieles verbessert. Was mir besonders gut gefällt ist, wie man zukünftig dynamisches Routing mit einer Next.js Webseite umsetzen kann.

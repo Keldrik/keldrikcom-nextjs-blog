@@ -3,6 +3,7 @@ title: "Xamarin.Forms - Mobile Entwicklung mit C# und XAML"
 date: "2016-01-07"
 tags: "c#"
 categories: "xamarin"
+description: "Ich habe mich für die Realisierung meiner nächsten App für Xamarin.Forms entschieden. Da ich bereits Erfahrung mit der Entwicklung von Windows Phone Apps habe, ist mir der Einstieg mit C# und XAML sehr leicht gefallen."
 ---
 
 Wer schon einmal mit Gedanken gespielt hat eine mobile Applikation zu entwickeln, der wird bei der Planung zwangsläufig mit dem Problem konfrontiert, dass es mehr als ein populäres OS für Smartphones und Tablets gibt. Android und Apple's IOS sind beide sehr beliebt und decken den Großteil des mobilen Marktes ab. Es gibt aber auch noch Windows Phone 8, Windows 8 und das relativ junge Windows 10. Für die Nutzer ist es gut, dass es Konkurrenz im mobilen Markt gibt, denn die belebt das Geschäft und fördert Innovation. Für kleine Entwickler Teams oder einzelne Programmierer, die möglicherweise nicht die Ressourcen aufbringen können native Apps für alle Plattformen zu entwickeln, kann es zu einem Problem werden.

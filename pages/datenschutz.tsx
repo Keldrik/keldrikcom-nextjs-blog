@@ -11,6 +11,10 @@ const Datenschutz: NextPage = () => {
           Datenschutz - Keldrik.com - Programmieren mit Javascript, Node.js,
           React usw...
         </title>
+        <meta
+          name="description"
+          content="Informationen über den Datenschutz. Bla, bla, bla... Nicht wirklich interessant..."
+        />
       </Head>
       <div className="pt-6 pb-6">
         <h1 className="text-3xl uppercase">Datenschutz</h1>

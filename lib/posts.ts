@@ -10,6 +10,7 @@ export interface post {
   title: string;
   categories: string[];
   tags: string[];
+  description: string;
   excerpt: string;
   content: string;
 }
@@ -31,6 +32,7 @@ const readPostData = async (
       title: string;
       categories: string;
       tags: string;
+      description: string;
     }),
   };
   const processedExcerpt = await remark()

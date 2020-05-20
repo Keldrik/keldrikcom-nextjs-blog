@@ -11,6 +11,10 @@ const Kontakt: NextPage<{ success?: boolean }> = ({ success }) => {
           Kontakt - Keldrik.com - Programmieren mit Javascript, Node.js, React
           usw...
         </title>
+        <meta
+          name="description"
+          content="Mit dem Kontaktformular kannst du mir eine Nachricht schicken."
+        />
       </Head>
       <div className="w-full max-w-lg mx-auto">
         <h1 className="text-2xl uppercase">Kontakt</h1>

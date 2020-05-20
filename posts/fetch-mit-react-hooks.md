@@ -3,6 +3,7 @@ title: "Fetch mit React Hooks"
 date: "2019-07-30"
 tags: "hooks, fetch, nextjs"
 categories: "react"
+description: "Mit React Version 16.8 wurden die sogenannten Hooks eingeführt. Das sind Funktionen, die es erlauben, mit funktionalen Components auf State Variablen zuzugreifen und auf Events zu reagieren."
 ---
 
 Seit Februar gibt es mit der React Version 16.8 die sogenannten Hooks. Das sind Funktionen, die es erlauben, mit funktionalen Components auf State Variablen zuzugreifen und auf Events zu reagieren. Damit ist es möglich in Zukunft ohne Class Components zu arbeiten und eine App nur noch mit Funktionen zu bauen.

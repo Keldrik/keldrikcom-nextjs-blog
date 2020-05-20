@@ -16,6 +16,10 @@ const Index: NextPage<IndexProps> = ({ allPosts }) => {
         <title>
           Keldriks Blog - Programmieren mit Javascript, Node.js, React usw...
         </title>
+        <meta
+          name="description"
+          content="Keldrik kommentiert in seinem Blog aktuelle News, gibt Tipps zur Programmierung mit Javascript, TypeScript, React und Node.js und berichtet über seine eigenen Projekte."
+        />
       </Head>
       <section>
         <Postlist postList={allPosts} />

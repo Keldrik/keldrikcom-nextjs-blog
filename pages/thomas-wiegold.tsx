@@ -12,6 +12,10 @@ const About: NextPage = () => {
           Thomas Wiegold - Selbständiger Programmierer aus Münster - Keldrik.com
           - Javascript, Node.js, React usw...
         </title>
+        <meta
+          name="description"
+          content="Eine kurze Beschreibung meiner Arbeit als selbstständiger Programmierer. Was interessiert mich und was habe ich gemacht."
+        />
       </Head>
       <div className="pt-6 pb-16">
         <h1 className="text-3xl uppercase">Thomas Wiegold</h1>

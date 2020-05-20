@@ -3,6 +3,7 @@ title: "Unity - Collision Detection"
 date: "2016-01-22"
 tags: "c#, collision"
 categories: "unity"
+description: "Wie finde ich heraus, ob ein Objekt das Andere berührt hat? Dafür gibt es eine einfach umzusetzende Antwort, die in der Unity Physics Engine integriert ist: Collision Detection."
 ---
 
 Wenn man einmal verstanden wie man Objekte anzeigt und in Bewegung setzt, wird man sich beim lernen mit dem Umgang der Unity Engine irgendwann eine Frage stellen: "Wie finde ich heraus, ob ein Objekt das Andere berührt hat?". Hat man zum Beispiel einen vom Spieler steuerbaren Charakter im Spiel und man möchte wissen wann dieser die bösen Monster berührt. Oder in einen Shooter, da muss man überprüfen ob die Schüsse einen Gegner oder den Spieler selber getroffen haben. Vielleicht möchte man auch einfach nur ein interaktives UI kreieren, dass auf den Maus-Zeiger entsprechend reagiert.

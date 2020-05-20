@@ -22,6 +22,7 @@ const Post: NextPage<PostProps> = ({ post }) => {
           {post.title} - Keldrik.com - Programmieren mit Javascript, Node.js,
           React usw...
         </title>
+        <meta name="description" content={post.description} />
       </Head>
       <article itemScope itemType="http://schema.org/Article">
         <meta itemProp="author" content="Thomas Wiegold" />

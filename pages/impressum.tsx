@@ -11,6 +11,10 @@ const Impressum: NextPage = () => {
           Impressum - Keldrik.com - Programmieren mit Javascript, Node.js, React
           usw...
         </title>
+        <meta
+          name="description"
+          content="Wer bin ich, wo bin ich, und wie kannst du mich kontaktieren?"
+        />
       </Head>
       <div className="pt-6 pb-16">
         <h1 className="text-3xl uppercase">Impressum</h1>

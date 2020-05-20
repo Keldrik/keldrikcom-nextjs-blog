@@ -3,6 +3,7 @@ title: "Unity - Position und Bewegung Teil 2"
 date: "2015-02-15"
 tags: "c#, transform"
 categories: "unity"
+description: "In diesem Artikel möchte ich etwas ausführlicher auf die Vector3 Klasse eingehen. Da man bei der Spiele Entwicklung ständig mit Vectoren arbeitet, ist es wichtig, die Arbeit mit ihnen zu beherrschen."
 ---
 
 Dies ist mein erster Artikel zum Thema Scripting in Unity. Ich habe hier in meinem Blog bis zuletzt nur über Spiele berichtet, aber nie über Programmierung und / oder die Entwicklung von Spielen. Das möchte ich zukünftig ändern und starte deshalb heute mit meinem ersten Beitrag über die Transform Komponente und das Verändern der Postition von GameObjects.
