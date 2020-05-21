@@ -12,6 +12,11 @@
     </url>
 
     <url>
+        <loc>https://www.keldrik.com/code/blog-umzug</loc>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
         <loc>https://www.keldrik.com/code/fetch-mit-react-hooks</loc>
         <priority>0.8</priority>
     </url>
