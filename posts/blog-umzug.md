@@ -18,7 +18,7 @@ Eines schönen Tages hörte ich einen englischsprachigen Podcast und da wurde We
 
 Ich blieb mit meiner Seite viele Jahre bei Squarespace und war insgesamt sehr zufrieden. Ich würde Squarespace auch immer noch jedem empfehlen, der möglichst einfach ohne technische Vorkenntnisse eine schöne Webseite haben will. Nun bin ich aber ein Programmierer und in den letzten Jahren viel mit Javascript, Typescript, Node.js und React beschäftigt. Da liegt es natürlich nahe auch meine eigene kleine Webseite mit diesen Technologien zu bauen, quasi als kleines Hobby Projekt für den Feierabend.
 
-Oft habe ich dieses Vorhaben aus Bequemlichkeit aufgeschoben, aber nun endlich aufgrund der sonst in Kürze verlängerten Squarespace Mitgliedschaft in Angriff genommen. Die Wahl der richtigen Technologien für die Umsetzung viel mir leicht. Für einen Blog bietet es sich an eine statische Seite für die bessere Performance zu generieren.
+Oft habe ich dieses Vorhaben aus Bequemlichkeit aufgeschoben, aber nun endlich aufgrund der sonst in Kürze verlängerten Squarespace Mitgliedschaft in Angriff genommen. Die Wahl der richtigen Technologien für die Umsetzung fiel mir leicht. Für einen Blog bietet es sich an eine statische Seite für die bessere Performance zu generieren.
 
 Mein persönlicher Favorit in dem Bereich ist [Next.js](https://nextjs.org/) in Verbindung mit [Vercel.com](https://vercel.com) als Host. Diese Kombo ist nicht nur super schnell und das Hosting (für kleine private Projekte) kostenlos, es ist für mich auch sehr logisch und einfach zu programmieren. Mit den letzten Updates haben die viele tolle Features eingebaut, die die Entwicklung insbesondere von statischen Seiten stark vereinfacht haben.
 
