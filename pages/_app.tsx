@@ -9,7 +9,7 @@ function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
   useEffect(() => {
     Fathom.load('CJTYANEN', {
-      includedDomains: ['keldrik.com'],
+      includedDomains: ['www.keldrik.com'],
       url: 'https://mastodon.keldrik.com/script.js',
     });
     function onRouteChangeComplete() {
