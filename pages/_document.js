@@ -11,6 +11,7 @@ class MyDocument extends Document {
     return (
       <Html lang="de-DE">
         <body>
+          <Head />
           <Main />
           <NextScript />
         </body>
