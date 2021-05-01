@@ -1,15 +1,18 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const SiteLogo: React.FunctionComponent = () => {
   return (
-    <div className="flex-shrink pb-1">
+    <div className="flex-shrink">
       <Link href="/">
         <a>
-          <img
+          <Image
             src="/img/logo.png"
-            className="w-48 h-auto hover:opacity-50 transform hover:scale-95 transition duration-500"
             alt="Keldrik Website Logo"
+            width={175}
+            height={24}
+            className="hover:opacity-50 transform hover:scale-95 transition duration-500"
           />
         </a>
       </Link>

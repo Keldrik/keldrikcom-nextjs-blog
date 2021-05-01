@@ -1,9 +1,9 @@
 import React from 'react';
-import Head from 'next/head';
 import Layout from '../components/layout';
 import { getSortedPosts, post } from '../lib/posts';
 import { GetStaticProps, NextPage } from 'next';
 import Postlist from '../components/postlist';
+import { NextSeo } from 'next-seo';
 
 export interface IndexProps {
   allPosts: post[];
@@ -11,21 +11,18 @@ export interface IndexProps {
 
 const Index: NextPage<IndexProps> = ({ allPosts }) => {
   return (
-    <Layout>
-      <Head>
-        <title>
-          Keldriks Blog - Programmieren mit Javascript, Node.js, React usw...
-        </title>
-        <meta
-          name="description"
-          content="Keldrik kommentiert in seinem Blog aktuelle News, gibt Tipps zur Programmierung mit Javascript, TypeScript, React und Node.js und berichtet über seine eigenen Projekte."
-        />
-        <link href="https://www.keldrik.com" rel="canonical" />
-      </Head>
-      <section>
-        <Postlist postList={allPosts} />
-      </section>
-    </Layout>
+    <>
+      <NextSeo
+        title="Keldriks Blog - Programmieren mit Javascript, Node.js, React usw..."
+        description="Keldrik kommentiert in seinem Blog aktuelle News, gibt Tipps zur Programmierung mit Javascript, TypeScript, React und Node.js und berichtet über seine eigenen Projekte."
+        canonical="https://www.keldrik.com"
+      />
+      <Layout>
+        <section>
+          <Postlist postList={allPosts} />
+        </section>
+      </Layout>
+    </>
   );
 };
 

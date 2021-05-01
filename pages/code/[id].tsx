@@ -2,10 +2,10 @@ import React, { useEffect } from 'react';
 import Prism from 'prismjs';
 import Layout from '../../components/layout';
 import { getAllPostIds, getPost, post } from '../../lib/posts';
-import Head from 'next/head';
 import Date from '../../components/date';
 import { GetStaticProps, GetStaticPaths, NextPage } from 'next';
 import Comments from '../../components/comments';
+import { NextSeo } from 'next-seo';
 
 export interface PostProps {
   post: post;
@@ -16,39 +16,36 @@ const Post: NextPage<PostProps> = ({ post }) => {
     Prism.highlightAll();
   }, []);
   return (
-    <Layout>
-      <Head>
-        <title>
-          {post.title} - Keldrik.com - Programmieren mit Javascript, Node.js,
-          React usw...
-        </title>
-        <meta name="description" content={post.description} />
-        <link
-          href={`https://www.keldrik.com/code/${post.id}`}
-          rel="canonical"
-        />
-      </Head>
-      <article itemScope itemType="http://schema.org/Article">
-        <meta itemProp="author" content="Thomas Wiegold" />
-        <header>
-          <h1
-            itemProp="name headline"
-            className="text-center text-2xl md:text-3xl"
-          >
-            {post.title}
-          </h1>
-          <div className="text-center text-lg pb-4">
-            <Date dateString={post.date} />
-          </div>
-        </header>
-        <div
-          itemProp="articleBody"
-          className="postcontent"
-          dangerouslySetInnerHTML={{ __html: post.content }}
-        />
-      </article>
-      <Comments id={post.id} title={post.title} />
-    </Layout>
+    <>
+      <NextSeo
+        title={`${post.title} - Keldrik.com - Programmieren mit Javascript, Node.js,
+            React usw...`}
+        description={post.description}
+        canonical={`https://www.keldrik.com/code/${post.id}`}
+      />
+      <Layout>
+        <article itemScope itemType="http://schema.org/Article">
+          <meta itemProp="author" content="Thomas Wiegold" />
+          <header>
+            <h1
+              itemProp="name headline"
+              className="text-center text-2xl md:text-3xl"
+            >
+              {post.title}
+            </h1>
+            <div className="text-center text-lg pb-4">
+              <Date dateString={post.date} />
+            </div>
+          </header>
+          <div
+            itemProp="articleBody"
+            className="postcontent"
+            dangerouslySetInnerHTML={{ __html: post.content }}
+          />
+        </article>
+        <Comments id={post.id} title={post.title} />
+      </Layout>
+    </>
   );
 };
 

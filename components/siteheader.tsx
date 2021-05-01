@@ -10,7 +10,7 @@ const Siteheader: React.FunctionComponent = () => {
     : 'h-full float-right focus:outline-none transform transition duration-300 md:hidden';
   return (
     <header className="pb-2">
-      <div className="flex justify-between">
+      <div className="flex justify-between items-end">
         <SiteLogo />
         <nav className="">
           <ul className="hidden md:flex justify-between h-full pb-2 text-xl">
@@ -31,7 +31,7 @@ const Siteheader: React.FunctionComponent = () => {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="fill-current text-gray-900 h-8 hover:text-gray-500 transition duration-300 ease-in-out"
+              className="fill-current text-gray-900 hover:text-gray-500 transition duration-300 ease-in-out h-8"
               viewBox="0 0 24 24"
             >
               <path d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />

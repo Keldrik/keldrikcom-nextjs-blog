@@ -1,7 +1,4 @@
 module.exports = {
-  theme: {
-    fontFamily: {
-      ubuntu: ['Ubuntu', 'sans-serif'],
-    },
-  },
+  purge: ['./pages/**/*.tsx', './components/**/*.tsx'],
+  theme: {},
 };
